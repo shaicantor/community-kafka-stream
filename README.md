@@ -264,7 +264,7 @@ consumer application to copy the data into the sub-system.
 In most cases, you will be required to connect the stream output topic to some external system or DB.
 In this example, I connect topic data to Elasticsearch and then I can show interactive dashboards in Kibana.
 
-In order to activate this ability, open `docker-compose.yml` file and uncomment services: elasticsearch, kibana, and elk-connect.
+In order to activate this ability, open `docker-compose.yml` file and uncomment services: elasticsearch, kibana, and elk-connect. (This require more RAM for docker. so increase memory to 4g).
 
 Then follow these instructions:
 1. Build the `connect` module: `mvn clean install`.
