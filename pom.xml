@@ -8,6 +8,21 @@
     <artifactId>kafka-stream-skeleton</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <kafka_2.12.version>2.0.0</kafka_2.12.version>
+        <kafka-streams.version>2.0.1</kafka-streams.version>
+        <kafka-clients.version>1.1.0</kafka-clients.version>
+
+        <jackson-databind.version>2.9.7</jackson-databind.version>
+        <slf4j-api.version>1.7.5</slf4j-api.version>
+        <slf4j-log4j12.version>1.7.5</slf4j-log4j12.version>
+        <commons-io.version>2.5</commons-io.version>
+
+        <maven-assembly-plugin.version>3.1.0</maven-assembly-plugin.version>
+        <versions-maven-plugin.version>2.7</versions-maven-plugin.version>
+        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+    </properties>
+
     <modules>
         <module>model</module>
         <module>producer</module>
@@ -15,5 +30,39 @@
         <module>consumer</module>
         <module>connect</module>
     </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <reporting>
+        <plugins>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>${versions-maven-plugin.version}</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>dependency-updates-report</report>
+                            <report>plugin-updates-report</report>
+                            <report>property-updates-report</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+        </plugins>
+    </reporting>
 
 </project>

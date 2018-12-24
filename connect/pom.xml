@@ -11,6 +11,11 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>connect</artifactId>
 
+    <properties>
+        <kafka-connect-elasticsearch.version>3.3.1</kafka-connect-elasticsearch.version>
+        <guava.version>20.0</guava.version>
+    </properties>
+
     <repositories>
         <repository>
             <id>jitpack</id>
@@ -20,17 +25,18 @@
         </repository>
     </repositories>
 
+
     <dependencies>
         <dependency>
             <groupId>com.github.confluentinc</groupId>
             <artifactId>kafka-connect-elasticsearch</artifactId>
-            <version>3.3.1</version>
+            <version>${kafka-connect-elasticsearch.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>20.0</version>
+            <version>${guava.version}</version>
         </dependency>
     </dependencies>
     <build>
