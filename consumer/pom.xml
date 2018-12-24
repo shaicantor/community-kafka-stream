@@ -21,12 +21,10 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>${slf4j-api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
-            <version>${slf4j-log4j12.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.kafka</groupId>
@@ -36,7 +34,6 @@
         <dependency>
             <groupId>com.tikal.org</groupId>
             <artifactId>stream-model</artifactId>
-            <version>${project.version}</version>
         </dependency>
     </dependencies>
     <build>

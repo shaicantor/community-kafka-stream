@@ -14,8 +14,7 @@
         <kafka-clients.version>1.1.0</kafka-clients.version>
 
         <jackson-databind.version>2.9.7</jackson-databind.version>
-        <slf4j-api.version>1.7.5</slf4j-api.version>
-        <slf4j-log4j12.version>1.7.5</slf4j-log4j12.version>
+        <slf4j.version>1.7.25</slf4j.version>
         <commons-io.version>2.5</commons-io.version>
 
         <maven-assembly-plugin.version>3.1.0</maven-assembly-plugin.version>
@@ -30,6 +29,29 @@
         <module>consumer</module>
         <module>connect</module>
     </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.tikal.org</groupId>
+                <artifactId>stream-model</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
 
     <build>
         <plugins>
