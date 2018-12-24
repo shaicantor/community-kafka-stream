@@ -210,11 +210,11 @@ docker-compose sets these values when running the container using docker. Howeve
 
 By default, (unless you change topic names and ports), set this values
 
-APPLICATION_ID="user-login-counts-app" 
+APPLICATION_ID="users-counts-app1" 
 
-INPUT_TOPIC="users-data" 
+INPUT_TOPIC="users-login" 
 
-OUTPUT_TOPIC="user-login-counts" 
+OUTPUT_TOPIC="users-counts" 
 
 KAFKA_URL="0.0.0.0:9092"
 
