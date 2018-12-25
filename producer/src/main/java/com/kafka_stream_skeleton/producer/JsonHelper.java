@@ -1,7 +1,7 @@
 package com.kafka_stream_skeleton.producer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.kafka_stream_skeleton.producer.proxy.footprints.FootprintsData;
+import com.kafka_stream_skeleton.model.proxy.footprints.FootprintsData;
 
 import java.io.IOException;
 import java.io.InputStream;

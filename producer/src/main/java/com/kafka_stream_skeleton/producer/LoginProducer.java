@@ -1,6 +1,6 @@
 package com.kafka_stream_skeleton.producer;
 
-import com.kafka_stream_skeleton.producer.proxy.footprints.FootprintsData;
+import com.kafka_stream_skeleton.model.proxy.footprints.FootprintsData;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerConfig;

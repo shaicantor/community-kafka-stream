@@ -4,7 +4,7 @@ package com.kafka_stream_skeleton.consumer.serialization;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.kafka.common.errors.SerializationException;
 import org.apache.kafka.common.serialization.Deserializer;
-import com.kafka_stream_skeleton.producer.proxy.footprints.FootprintsData;
+import com.kafka_stream_skeleton.model.proxy.footprints.FootprintsData;
 
 import java.util.Map;
 

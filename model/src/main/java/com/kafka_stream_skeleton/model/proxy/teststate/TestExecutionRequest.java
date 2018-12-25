@@ -1,4 +1,4 @@
-package com.kafka_stream_skeleton.producer.proxy.teststate;
+package com.kafka_stream_skeleton.model.proxy.teststate;
 
 /**
  * Created by nadav on 08/12/2016.

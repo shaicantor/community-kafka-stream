@@ -1,4 +1,4 @@
-package com.kafka_stream_skeleton.producer.proxy.footprints;
+package com.kafka_stream_skeleton.model.proxy.footprints;
 
 import lombok.Data;
 

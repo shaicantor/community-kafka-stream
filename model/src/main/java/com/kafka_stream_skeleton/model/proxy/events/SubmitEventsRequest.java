@@ -1,4 +1,4 @@
-package com.kafka_stream_skeleton.producer.proxy.events;
+package com.kafka_stream_skeleton.model.proxy.events;
 
 
 import java.util.ArrayList;

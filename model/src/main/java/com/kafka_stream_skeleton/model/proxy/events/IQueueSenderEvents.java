@@ -1,4 +1,4 @@
-package com.kafka_stream_skeleton.producer.proxy.events;
+package com.kafka_stream_skeleton.model.proxy.events;
 
 /**
  * Created by Nadav on 7/5/2016.
