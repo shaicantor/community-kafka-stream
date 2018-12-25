@@ -39,6 +39,7 @@ public class LoginProducer {
 
     public void produce(String topicName, String userName, String userPassword, String ip, Long date) {
 
+        JsonHelper.printFootprints();
         LoginData loginData = new LoginData(userName, userPassword, ip, date, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSSSS").format(date));
 
         System.out.println("produce:" + loginData);
