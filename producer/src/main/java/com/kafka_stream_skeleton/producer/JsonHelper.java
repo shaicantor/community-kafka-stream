@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class JsonHelper {
-    public static void printFootprints(){
+    public static FootprintsData getFootprints(){
         ObjectMapper mapper = new ObjectMapper();
         InputStream is = FootprintsData.class.getResourceAsStream("/Footprints.json");
         FootprintsData result = null;
@@ -16,10 +16,6 @@ public class JsonHelper {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        System.out.println("############################");
-        System.out.println(result);
-        System.out.println("############################");
-
+        return result;
     }
 }

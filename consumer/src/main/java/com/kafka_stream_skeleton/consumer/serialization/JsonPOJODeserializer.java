@@ -2,13 +2,13 @@ package com.kafka_stream_skeleton.consumer.serialization;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.kafka_stream_skeleton.model.LoginCount;
 import org.apache.kafka.common.errors.SerializationException;
 import org.apache.kafka.common.serialization.Deserializer;
+import com.kafka_stream_skeleton.producer.proxy.footprints.FootprintsData;
 
 import java.util.Map;
 
-public class JsonPOJODeserializer implements Deserializer<LoginCount> {
+public class JsonPOJODeserializer implements Deserializer<FootprintsData> {
 
     private ObjectMapper objectMapper = new ObjectMapper();
 
@@ -17,18 +17,18 @@ public class JsonPOJODeserializer implements Deserializer<LoginCount> {
     }
 
     @Override
-    public LoginCount deserialize(String topic, byte[] data) {
+    public FootprintsData deserialize(String topic, byte[] data) {
         if (data == null)
             return null;
 
-        LoginCount loginCount;
+        FootprintsData footprintsData;
         try {
-            loginCount = objectMapper.readValue(data, LoginCount.class);
+            footprintsData = objectMapper.readValue(data, FootprintsData.class);
         } catch (Exception e) {
             throw new SerializationException(e);
         }
 
-        return loginCount;
+        return footprintsData;
     }
 
 
