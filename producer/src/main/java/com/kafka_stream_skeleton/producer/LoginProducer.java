@@ -1,6 +1,6 @@
 package com.kafka_stream_skeleton.producer;
 
-import com.kafka_stream_skeleton.model.proxy.footprints.FootprintsData;
+import com.kafka_stream_skeleton.model.proxy.footprints.SubmitFootprintsRequest;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -12,7 +12,7 @@ public class LoginProducer {
 
     private Producer producer;
 
-    private Producer<String, FootprintsData> getProducer() {
+    private Producer<String, SubmitFootprintsRequest> getProducer() {
         String kafkaUrl = System.getenv("KAFKA_URL");
 
         if(kafkaUrl==null){
@@ -42,7 +42,7 @@ public class LoginProducer {
 
         //System.out.println("produce:" + loginData);
 
-        ProducerRecord<String, FootprintsData> rec = new ProducerRecord<>(topicName, JsonHelper.getFootprints());
+        ProducerRecord<String, SubmitFootprintsRequest> rec = new ProducerRecord<>(topicName, JsonHelper.getFootprints());
 
         getProducer().send(rec);
     }

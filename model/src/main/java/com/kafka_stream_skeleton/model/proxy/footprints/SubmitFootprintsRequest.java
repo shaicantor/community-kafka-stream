@@ -1,5 +1,6 @@
 package com.kafka_stream_skeleton.model.proxy.footprints;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ import java.util.Map;
  * Created by Ronis on 4/4/2017.
  */
 @Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class SubmitFootprintsRequest {
     private String customerId;
     private Object environment;

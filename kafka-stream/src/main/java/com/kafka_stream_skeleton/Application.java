@@ -4,7 +4,6 @@ package com.kafka_stream_skeleton;
 //import com.kafka_stream_skeleton.model.LoginData;
 import com.kafka_stream_skeleton.model.LoginCount;
 import com.kafka_stream_skeleton.model.LoginData;
-import com.kafka_stream_skeleton.model.proxy.footprints.FootprintsData;
 import com.kafka_stream_skeleton.serialization.SerdeBuilder;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.Serde;
